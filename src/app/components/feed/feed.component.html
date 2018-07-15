@@ -1,0 +1,36 @@
+<!-- One -->
+<section id="One" class="wrapper style3">
+    <div class="inner">
+        <header class="align-center">
+
+            <h2>{{ feed.title }}</h2>
+        </header>
+    </div>
+</section>
+
+<!-- Two -->
+<section id="two" class="wrapper style2">
+    <div class="inner">
+        <div class="box">
+            <div class="image">
+                <img src="{{ feed.preview.images[0].source.url}}" alt="">
+            </div>
+
+
+            <div [innerHTML]="feed.media_embed.content"></div>
+
+            <div class="content">
+                <header class="align-center">
+                    <h2>Created by {{ feed.author }}</h2>
+                </header>
+                <p></p>
+                <div class="comments">
+                    <div *ngFor="let item of comments" class="comment">
+                        <h3>{{ item.data.author }}</h3>
+                        <p>{{ item.data.body }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

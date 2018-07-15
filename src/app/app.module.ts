@@ -3,11 +3,21 @@ import { NgModule } from '@angular/core';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+// Routing
+import { APP_ROUTING } from './app.routes';
+
+// Providers
 import { RedditService } from './providers/reddit.service';
 
+// Components
+import { HomeComponent } from './components/home/home.component';
+import { FeedComponent } from './components/feed/feed.component';
+import { BuscarComponent } from './components/buscar/buscar.component';
+import { EscapeHtmlPipe } from './pipes/keep-html.pipe';
+
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, HttpModule, JsonpModule],
+  declarations: [AppComponent, HomeComponent, FeedComponent, BuscarComponent, EscapeHtmlPipe],
+  imports: [BrowserModule, HttpModule, JsonpModule, APP_ROUTING],
   providers: [RedditService],
   bootstrap: [AppComponent]
 })

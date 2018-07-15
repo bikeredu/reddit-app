@@ -1,0 +1,13 @@
+.wrapper>.inner{width:90rem}
+.grid-style .box{background-color:transparent;width:33.3%;max-width:520px;padding:15px}
+.grid-style .box .image{max-height:380px;overflow:hidden}
+.grid-style .box .content{background-color:#fff}
+.grid-style .box .content header{word-break:break-all}
+.grid-style .box .content header h2{font-size:1.3rem}
+.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
+.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}
+@-webkit-keyframes fadeIn{from{opacity:0}
+to{opacity:1}
+}@keyframes fadeIn{from{opacity:0}
+to{opacity:1}
+}
