@@ -2,6 +2,16 @@
     width: 90rem;
 }
 
+.banner.full {
+    height: 65vh !important;
+    min-height: 65vh;
+}
+
+.title-home {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
 .grid-style {
     .box {
         background-color: transparent;
@@ -20,6 +30,53 @@
                     font-size: 1.3rem
                 }
             }
+        }
+    }
+}
+
+.wrapper.style3 {
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+.wrapper.style2.feed {
+    .btn {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+    }
+    .box {
+        display: flex;
+        position: relative;
+    }
+    h2 {
+        text-align: left;
+        margin-top: 30px;
+    }
+    .image {
+        text-align: center;
+        background-color: #000;
+        width: 45%;
+        float: left;
+        img {
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+}
+
+.comments {
+    padding: 20px;
+    border: 1px solid #eee;
+    .comment {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+        &:last-child {
+            border: none;
+        }
+        p {
+            margin-bottom: 10px;
         }
     }
 }

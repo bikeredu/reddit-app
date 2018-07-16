@@ -23,7 +23,7 @@ export class FeedComponent implements OnInit {
             .subscribe( feed => {
               this.feed = feed[0].data.children[0].data;
               this.comments = feed[1].data.children;
-              console.log(feed[0].data.children[0].data);
+              console.log(feed[1].data.children);
             });
       });
      }

@@ -3,30 +3,33 @@
     <div class="inner">
         <header class="align-center">
 
-            <h2>{{ feed.title }}</h2>
+            <h1>{{ feed.title }}</h1>
         </header>
     </div>
 </section>
 
 <!-- Two -->
-<section id="two" class="wrapper style2">
+<section id="two" class="wrapper style2 feed">
     <div class="inner">
         <div class="box">
             <div class="image">
                 <img src="{{ feed.preview.images[0].source.url}}" alt="">
             </div>
 
-
-            <div [innerHTML]="feed.media_embed.content"></div>
-
             <div class="content">
+
                 <header class="align-center">
+                    <button [routerLink]="['/home']" type="button" class="btn">
+                            Regresar
+                    </button>
                     <h2>Created by {{ feed.author }}</h2>
                 </header>
-                <p></p>
-                <div class="comments">
+                <p *ngIf="feed.selftext != undefined">{{ feed.selftext }}</p>
+                <div *ngIf="comments.length > 0" class="comments">
+                    <h3 class="title">Comments</h3>
                     <div *ngFor="let item of comments" class="comment">
-                        <h3>{{ item.data.author }}</h3>
+
+                        <strong>{{ item.data.author }}</strong>
                         <p>{{ item.data.body }}</p>
                     </div>
                 </div>
