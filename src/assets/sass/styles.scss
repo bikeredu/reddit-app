@@ -1,5 +1,6 @@
 .wrapper>.inner {
-    width: 90rem;
+    width: 95%;
+    max-width: 90rem;
 }
 
 .banner.full {
@@ -13,11 +14,17 @@
 }
 
 .grid-style {
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
     .box {
         background-color: transparent;
         width: 33.3%;
         max-width: 520px;
         padding: 15px;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
         .image {
             max-height: 380px;
             overflow: hidden;
@@ -45,10 +52,16 @@
         position: absolute;
         right: 1.5rem;
         top: 1.5rem;
+        @media (max-width: 600px) {
+            width: 50%;
+        }
     }
     .box {
         display: flex;
         position: relative;
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
     }
     h2 {
         text-align: left;
@@ -59,6 +72,9 @@
         background-color: #000;
         width: 45%;
         float: left;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
         img {
             display: inline-block;
             max-width: 100%;
